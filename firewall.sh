@@ -1,4 +1,4 @@
-#!/bin/bash
+# !/bin/bash
 # REDD's Firewall "Made Easy" Script
 # Gift from REDD to the IT friends.
 #
