@@ -26,7 +26,7 @@ defterm(){
 }
 # Check for root priviliges
 if [[ $EUID -ne 0 ]]; then
-   printf "${RED}Please run as root:\nsudo %s\n${DEF}" "${0}"
+   echo -e "${RED}Please run as root:\nsudo ${0}\n${DEF}"
    exit 1
 fi
 if [ -z "$1" ];then
@@ -37,7 +37,7 @@ else
         # Check for user defined Ports
         for ((i = 1; i <= $#; i++ )); do
                 if ! [[ ${!i} =~ $NUMCHK ]] ; then
-                        echo "${RED}ERROR: Argument $i is not a numberic value.${DEF}" >&2; exit 1
+                        echo -e "${RED}ERROR: Argument $i is not a numberic value.${DEF}" >&2; exit 1
                 fi
                 PORT[$i]=${!i};
         done
