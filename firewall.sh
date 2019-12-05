@@ -22,7 +22,7 @@ CYN="\e[36m"
 LBL="\e[94m"
 
 defterm(){
-        echo -e "${LBL} \u2192 ${CYN}$1${DEF}";
+        echo -e "${LBL} -> ${CYN}$1${DEF}";
 }
 # Check for root priviliges
 if [[ $EUID -ne 0 ]]; then
